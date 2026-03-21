@@ -17,8 +17,10 @@ public class CheckpointColor : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Trigger");
         if (other.CompareTag("Player") && !isActivated)
         {
+            Debug.Log("Trigger");
             ActivateCheckpoint();
         }
     }
