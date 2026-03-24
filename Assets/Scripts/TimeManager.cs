@@ -2,17 +2,17 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class GlobalTimer : MonoBehaviour
+public class TimeManager : MonoBehaviour
 {
     [Header("UI Reference")]
     public TextMeshProUGUI timerText;
 
     [Header("Settings")]
-    public float initialTime = 60f; 
+    public float initialTime = 55f; 
     public float warningThreshold = 10f; // เริ่มเตือนที่ 10 วินาที
     
     [Header("Colors")]
-    public Color normalColor = Color.green; // สีปกติ
+    public Color normalColor = Color.white; // สีปกติ
     public Color warningColor = Color.red;   // สีเตือน
 
     public static float timeRemaining; 

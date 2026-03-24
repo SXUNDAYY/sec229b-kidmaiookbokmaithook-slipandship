@@ -41,7 +41,7 @@ public class CheckpointColor : MonoBehaviour
         }
 
         // 2. สั่งหยุดเวลา (เรียกใช้ฟังก์ชันจากสคริปต์ GlobalTimer)
-        GlobalTimer.StopTimer();
+        TimeManager.StopTimer();
 
         Debug.Log("Checkpoint Reached: Timer Stopped & Color Changed to Green!");
     }
