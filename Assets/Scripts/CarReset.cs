@@ -1,26 +1,18 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.SceneManagement; // ต้องมีบรรทัดนี้ด้วยสำหรับการโหลดฉาก
 
 public class CarReset : MonoBehaviour
 {
-    [Header("Settings")]
-    public KeyCode resetKey = KeyCode.R; // ปุ่มสำหรับกดรีเซ็ต
-    
     void Update()
     {
-        // เมื่อกดปุ่ม R
-        if (Input.GetKeyDown(resetKey))
+        // เมื่อผู้เล่นกดปุ่ม R บนคีย์บอร์ด
+        if (Input.GetKeyDown(KeyCode.R))
         {
-            ResetPlayer();
-        }
-    }
+            // 1. [สำคัญมาก] คืนค่าเวลาให้เกมกลับมาเดินปกติก่อน (ป้องกันเกมค้าง)
+            Time.timeScale = 1f; 
 
-    void ResetPlayer()
-    {
-        Debug.Log("Manual Reset! Time is still running...");
-        
-        // โหลด Scene ปัจจุบันใหม่
-        // เนื่องจากเราใช้ 'static' ใน GlobalTimer ค่าเวลาจะยังคงนับต่อจากเดิมเป๊ะๆ
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            // 2. โหลดฉากปัจจุบันใหม่ (เวลาจะไม่กลับไป 60 วิ เพราะเราดักไว้ใน GlobalTimer แล้ว)
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 }

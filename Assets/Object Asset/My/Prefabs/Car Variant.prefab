@@ -199,7 +199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionHandler
   groundTag: Ground
-  restartDelay: 0.3
+  restartDelay: 0.1
 --- !u!146 &5581587846420904904 stripped
 WheelCollider:
   m_CorrespondingSourceObject: {fileID: 968219384847155670, guid: 3f83a5a9639ce0249ac0d7df9b8c40b9, type: 3}
