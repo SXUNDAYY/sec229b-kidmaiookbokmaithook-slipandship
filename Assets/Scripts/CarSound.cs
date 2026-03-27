@@ -28,6 +28,13 @@ public class CarSound : MonoBehaviour
 
     void Update()
     {
+        // ถ้าหมดเวลา → หยุดเสียงทั้งหมด
+        if (!GlobalTimer.isTimerRunning)
+        {
+            StopAllSounds();
+            return; // ออกจาก Update ทันที
+        }
+
         float speed = rb.linearVelocity.magnitude;
 
         // ปรับเสียงเครื่องตามความเร็ว
@@ -45,16 +52,33 @@ public class CarSound : MonoBehaviour
         }
 
         lastSpeed = speed;
+
     }
 
-    // 💥 ตรวจจับการชน
+    //ตรวจจับการชน
     void OnCollisionEnter(Collision collision)
     {
+        //ถ้าหมดเวลา → ไม่ให้เล่นเสียงชน
+        if (!GlobalTimer.isTimerRunning) return;
+
         float impact = collision.relativeVelocity.magnitude;
 
         if (impact > crashThreshold)
         {
             crashSource.PlayOneShot(crashClip);
         }
+    }
+
+    // 🛑ฟังก์ชันหยุดเสียงทั้งหมด
+    void StopAllSounds()
+    {
+        if (engineSound != null && engineSound.isPlaying)
+            engineSound.Stop();
+
+        if (brakeSource != null && brakeSource.isPlaying)
+            brakeSource.Stop();
+
+        if (crashSource != null && crashSource.isPlaying)
+            crashSource.Stop();
     }
 }

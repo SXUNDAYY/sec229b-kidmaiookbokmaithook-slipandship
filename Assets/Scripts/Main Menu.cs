@@ -5,7 +5,7 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadSceneAsync(1);
+        SceneManager.LoadScene(5);
     }
     public void Credit()
     {
@@ -18,6 +18,10 @@ public class MainMenu : MonoBehaviour
     public void Menu()
     {
         SceneManager.LoadScene(0);
+    }
+    public void StartGame()
+    {
+        SceneManager.LoadScene(1);
     }
 
 }

@@ -33595,6 +33595,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Car
       objectReference: {fileID: 0}
+    - target: {fileID: 4240013002817336293, guid: ff970646105916048acfa6d3771ae57a, type: 3}
+      propertyPath: brakeClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5a3667dc8ad48454c973a390e2673ee4, type: 3}
+    - target: {fileID: 4240013002817336293, guid: ff970646105916048acfa6d3771ae57a, type: 3}
+      propertyPath: brakeSource
+      value: 
+      objectReference: {fileID: 1892973341}
     - target: {fileID: 5033739296555747667, guid: ff970646105916048acfa6d3771ae57a, type: 3}
       propertyPath: restartDelay
       value: 0.1
@@ -33982,6 +33990,10 @@ PrefabInstance:
     - target: {fileID: 5116041656732967822, guid: 9a90322ad104b6b44b38aeb9d700b12e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7508689510037052188, guid: 9a90322ad104b6b44b38aeb9d700b12e, type: 3}
+      propertyPath: initialTime
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 7929190472571883339, guid: 9a90322ad104b6b44b38aeb9d700b12e, type: 3}
       propertyPath: m_Name

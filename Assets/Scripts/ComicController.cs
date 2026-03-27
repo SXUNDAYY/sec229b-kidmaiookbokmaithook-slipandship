@@ -1,15 +1,25 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ComicController : MonoBehaviour
 {
-    public Image comicImage;      // ช่องแสดงภาพ
-    public Sprite[] comics;       // รูปทั้งหมด
+    public Image comicImage;// ช่องแสดงภาพ
+    public Sprite[] comics;// รูปทั้งหมด
+
+    public AudioSource music; //เสียง
+    public string Credit;
 
     int currentIndex = 0;
 
-    void Start()
+    void OnEnable() //จะทำงานตอนเปิดหน้า comic
     {
+        if (music != null)
+        {
+            music.Play(); // เล่นเพลง
+        }
+
+        currentIndex = 0;
         ShowComic();
     }
 
@@ -24,12 +34,19 @@ public class ComicController : MonoBehaviour
         else
         {
             Debug.Log("จบแล้ว!");
-            gameObject.SetActive(false); // ปิด panel
+            SceneManager.LoadScene(Credit);
         }
     }
 
     void ShowComic()
     {
         comicImage.sprite = comics[currentIndex];
+    }
+    void OnDisable()
+    {
+        if (music != null)
+        {
+            music.Stop();
+        }
     }
 }
