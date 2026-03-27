@@ -7,10 +7,19 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadSceneAsync(1);
     }
+    public void Credit()
+    {
+        SceneManager.LoadScene(4);
+    }
     public void QuitGame()
     {
         Application.Quit();
     }
+    public void Menu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
 }
   
  

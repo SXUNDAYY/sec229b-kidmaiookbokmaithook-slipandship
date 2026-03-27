@@ -17,6 +17,10 @@ public class CarController : MonoBehaviour
     [Header("Physics Setup")]
     public Vector3 centerOfMassOffset = new Vector3(0, -0.9f, 0.5f); // ช่วยเรื่องการเลี้ยว
 
+    [Header("Brake Sound 🔊")]
+    public AudioSource brakeSource;
+    public AudioClip brakeClip;
+
     private float moveInput;
     private float steerInput;
     private bool isBraking;
@@ -54,6 +58,15 @@ public class CarController : MonoBehaviour
 
         // Space = Brake
         isBraking = Input.GetKey(KeyCode.Space);
+
+        //เล่นเสียงเบรก (S หรือ Space)
+        if ((Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.Space)))
+        {
+            if (brakeSource != null && brakeClip != null)
+            {
+                brakeSource.PlayOneShot(brakeClip);
+            }
+        }
     }
 
     private void HandleMotor()

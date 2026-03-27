@@ -28509,6 +28509,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: POPUP_IN_GAME
       objectReference: {fileID: 0}
+    - target: {fileID: 5559200315257533214, guid: 6186cc3a95a85e34eac6cd3723a8a1ed, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
     - target: {fileID: 8588167791149393503, guid: 6186cc3a95a85e34eac6cd3723a8a1ed, type: 3}
       propertyPath: m_Pivot.x
       value: 0
