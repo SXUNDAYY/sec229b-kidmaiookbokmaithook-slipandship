@@ -34381,6 +34381,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6492035536567656417, guid: 9a90322ad104b6b44b38aeb9d700b12e, type: 3}
+      propertyPath: sfxSource
+      value: 
+      objectReference: {fileID: 6039031669069293647}
     - target: {fileID: 7508689510037052188, guid: 9a90322ad104b6b44b38aeb9d700b12e, type: 3}
       propertyPath: initialTime
       value: 45
@@ -34394,6 +34398,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a90322ad104b6b44b38aeb9d700b12e, type: 3}
+--- !u!82 &6039031669069293647 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2757032981142693901, guid: 9a90322ad104b6b44b38aeb9d700b12e, type: 3}
+  m_PrefabInstance: {fileID: 6039031669069293646}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6309972884234275666
 PrefabInstance:
   m_ObjectHideFlags: 0

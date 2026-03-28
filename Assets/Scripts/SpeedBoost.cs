@@ -11,7 +11,7 @@ public class SpeedBoost : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Rigidbody carRb = other.GetComponent<Rigidbody>();
-
+            
             if (carRb != null)
             {
                 // 1. ดึงค่ามวล (m) ของรถจาก Rigidbody
@@ -25,7 +25,7 @@ public class SpeedBoost : MonoBehaviour
 
                 // 4. นำผลลัพธ์ Force ที่ได้ไปใช้ใน AddForce() เพื่อแสดงผลฟิสิกส์
                 carRb.AddForce(forceDirection, ForceMode.Impulse);
-
+                
                 Debug.Log("ใช้กฎ F = ma | รถหนัก: " + m + " | ใส่แรงพุ่ง: " + forceMagnitude);
             }
         }
