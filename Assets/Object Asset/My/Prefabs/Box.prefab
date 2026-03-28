@@ -14,8 +14,9 @@ GameObject:
   - component: {fileID: 5622375214397958963}
   - component: {fileID: 1353389205286958689}
   - component: {fileID: 8036143213074846175}
+  - component: {fileID: 5663389770482304963}
   m_Layer: 0
-  m_Name: Box 1
+  m_Name: Box
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 6632639880019841066}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.89, y: 2.09, z: -1.1}
+  m_LocalPosition: {x: 8.51, y: 2.09, z: -2.3099937}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -101,7 +102,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6632639880019841066}
   serializedVersion: 5
-  m_Mass: 0.5
+  m_Mass: 0.7
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -154,3 +155,18 @@ ConstantForce:
   m_RelativeForce: {x: 0, y: 0, z: 0}
   m_Torque: {x: 0, y: 0, z: 0}
   m_RelativeTorque: {x: 0, y: 0, z: 0}
+--- !u!114 &5663389770482304963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6632639880019841066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 230f108e80786b740a6f7b768c4afdbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BoxChecker
+  playerTag: Player
+  restartDelay: 0.3
+  fallThreshold: -10
