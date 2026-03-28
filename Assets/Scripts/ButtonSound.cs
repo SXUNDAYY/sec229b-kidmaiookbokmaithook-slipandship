@@ -7,22 +7,24 @@ public class ButtonSound : MonoBehaviour, IPointerEnterHandler, IPointerClickHan
     public AudioSource sfxSource;   // ตัวเล่นเสียง
 
     [Header("Audio Clips")]
-    public AudioClip hoverSound;    // เสียงตอนชี้เมาส์
+    public AudioClip hoverSound;    // เสียงตอนเอาเมาส์ชี้
     public AudioClip clickSound;    // เสียงตอนกด
 
-    //เมาส์ชี้ปุ่ม
+    // เมาส์ชี้
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if (hoverSound != null)
+        // เช็คว่ามีไฟล์เสียง และ มีลำโพงใส่ไว้แล้ว ค่อยสั่งเล่น
+        if (hoverSound != null && sfxSource != null)
         {
             sfxSource.PlayOneShot(hoverSound);
         }
     }
 
-    //กดปุ่ม
+    // กดปุ่ม
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (clickSound != null)
+        // เช็คว่ามีไฟล์เสียง และ มีลำโพงใส่ไว้แล้ว ค่อยสั่งเล่น
+        if (clickSound != null && sfxSource != null)
         {
             sfxSource.PlayOneShot(clickSound);
         }
